@@ -6,7 +6,7 @@ const Sondage = () => {
   const [sondages, setSondages] = useState();
   const getSondage = async () => {
     try {
-      const reponse = await axios.get("http://localhost:5000/sondage", {
+      const reponse = await axios.get("https://soudage.herokuapp.com/sondage", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

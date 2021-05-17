@@ -22,7 +22,10 @@ const SignUp = () => {
   const onFinish = async (values) => {
     try {
       setLoading(true);
-      const reponse = await axios.post("http://localhost:5000/user", values);
+      const reponse = await axios.post(
+        "https://soudage.herokuapp.com/user",
+        values
+      );
       setLoading(false);
     } catch (error) {
       setLoading(false);
